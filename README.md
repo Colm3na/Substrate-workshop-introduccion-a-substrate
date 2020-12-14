@@ -6,6 +6,29 @@ En este repositorio está toda la información relacionada con el workshop.
 1. [Información general del workshop](#id1)
 2. [Prerrequisitos para hacer la parte práctica o taller](#id2)
 
+El taller será retransmitido en la plataforma crowcast, podeis acceder usando [https://www.crowdcast.io/e/introduccion-a-substrate-workshop/](este link).
+
+## 1. Información general del workshop
+
+Charla/taller en Español sobre el framework Substrate, la principal herramienta para crear bockchains sobre Polkadot. Vamos a ver qué es Substrate, sus características y cómo añadirle funcionalidades a nuestra blockchain. A continuación, habrá un taller sobre cómo añadir un pallet (módulo runtime de Substrate) a nuestra bockchain.
+
+En la primera parte vamos a tratar los siguientes temas:
+* Qué es substrate
+* Qué nos permite hacer Susbtrate
+* Explicar qué es el runtime de substrate
+* Qué partes componen un cliente substrate y con qué proposito
+* La arquitectura de substrate(Rust y WASM-webassembly)
+* Forkless runtime upgrades (Actualizaciones sin hard-fork): explicar por qué es posible esta característica en las blockchain basadas en substrate. Se explicará en qué consiste un hard fork sin entrar en conceptos muy avanzados.
+* Explicar brevemente las 3 formas que existen de trabajar con substrate
+* Explicaremos la arquitectura de FRAME, la librería de substrate.
+* Explicar el concepto de Pallet en substrate.
+
+La segunda parte corresponde a la parte del taller, aunque habrá una pequeña introducción:
+
+* Explicar el concepto de las macros en substrate y para qué se utilizan.
+* Explicar las herramientas que se van a utilizar en el taller: plantilla de un nodo substrate y plantilla del front-end.
+* Explicaremos cómo poner en marcha y añadir un pallet a nuestra blockchain.
+
 
 
 ## 2. Prerrequisitos para hacer la parte práctica o taller
@@ -17,7 +40,7 @@ En el caso que querais llevar a cabo el taller o "trastear" con substrate de la 
 
 ### (Opción 1) Máquina virtual 
 
-La máquina virtual  **workshop-substrate** con todo ya configurado la teneis [este link](https://www.colmenalabs.org/vm/workshop-substrate.zip).
+La máquina virtual  **workshop-substrate** con todo ya configurado la teneis en [este link](https://www.colmenalabs.org/vm/workshop-substrate.zip).
 
 Solo habría que descompimirla e importarla en vuestro gestor de máquinas virtuales. En caso que os pida loguearos:
 
