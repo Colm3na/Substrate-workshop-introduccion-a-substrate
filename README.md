@@ -114,6 +114,14 @@ Y volvemos a ejecutar:
 source ~/.profile
 ~~~
 
+En el caso de que tengás más versiones instaladas, deberías ejecutar la siguiente instrucción para elegir la versión a utilizar:
+
+~~~
+nvm use 14.4.0
+~~~
+
+
+
 #### Instalación de yarn
 
 Para llevar a cabo la instalación de yarn lo haremos desde los repositorios de ubuntu, pero antes hay que añadirlo:
