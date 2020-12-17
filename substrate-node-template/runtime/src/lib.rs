@@ -196,6 +196,40 @@ impl pallet_aura::Trait for Runtime {
 	type AuthorityId = AuraId;
 }
 
+//nicks pallet
+parameter_types!{
+	pub const MinNickLength: usize = 2;
+	pub const MaxNickLength: usize = 10;
+	pub const NickReservationFee: u128 = 100;
+}
+
+
+impl pallet_nicks::Trait for Runtime{
+
+	type Currency = pallet_balances::Module<Runtime>;
+
+    // Use the NickReservationFee from the parameter_types block.
+    type ReservationFee = NickReservationFee;
+
+    // No action is taken when deposits are forfeited.
+    type Slashed = ();
+
+    // Configure the FRAME System Root origin as the Nick pallet admin.
+    // https://substrate.dev/rustdocs/v2.0.0/frame_system/enum.RawOrigin.html#variant.Root
+    type ForceOrigin = frame_system::EnsureRoot<AccountId>;
+
+    // Use the MinNickLength from the parameter_types block.
+    type MinLength = MinNickLength;
+
+    // Use the MaxNickLength from the parameter_types block.
+    type MaxLength = MaxNickLength;
+
+    // The ubiquitous event type.
+    type Event = Event;
+
+
+}
+
 impl pallet_grandpa::Trait for Runtime {
 	type Event = Event;
 	type Call = Call;
@@ -266,6 +300,75 @@ impl pallet_template::Trait for Runtime {
 	type Event = Event;
 }
 
+// Pallet de Nicks
+
+//Primer paso, definición de parámetros
+
+/*
+parameter_types! {
+	
+	// Definir las variables que tenemos en el Trait de configuración, consejo: si es get normalmente es un parámetro a añadir
+
+    pub const NickReservationFee: u128 = 100;
+    pub const MinNickLength: usize = 8;
+    pub const MaxNickLength: usize = 32;
+}
+
+*/
+
+
+
+// Implementación del Trait de configuración del Pallet
+
+
+/*
+impl pallet_nicks::Trait for Runtime {
+
+    // The Balances pallet implements the ReservableCurrency trait.
+    // https://substrate.dev/rustdocs/v2.0.0/pallet_balances/index.html#implementations-2
+    type Currency = pallet_balances::Module<Runtime>;
+
+    
+    type ReservationFee = NickReservationFee;
+
+    // El uso de () es para decir que no haga nada, esta configuración de slashed es opcional, por ello podemos hacer ésto.
+    type Slashed = ();
+
+    // Configure the FRAME System Root origin as the Nick pallet admin.
+    // https://substrate.dev/rustdocs/v2.0.0/frame_system/enum.RawOrigin.html#variant.Root
+    type ForceOrigin = frame_system::EnsureRoot<AccountId>;
+
+    
+    type MinLength = MinNickLength;
+
+    
+    type MaxLength = MaxNickLength;
+
+    // Al utilizar la palabra Event, es un tipo que existe en la system library, y al utilizar creamos y lanzamos un evento.
+    type Event = Event;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 construct_runtime!(
 	pub enum Runtime where
@@ -283,6 +386,7 @@ construct_runtime!(
 		Sudo: pallet_sudo::{Module, Call, Config<T>, Storage, Event<T>},
 		// Include the custom logic from the template pallet in the runtime.
 		TemplateModule: pallet_template::{Module, Call, Storage, Event<T>},
+		// Nicks: pallet_nicks::{Module, Call, Storage, Event<T>},
 	}
 );
 
