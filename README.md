@@ -8,9 +8,10 @@ En este repositorio está toda la información relacionada con el workshop.
 3. [Definición de instrucciones, opciones y código utilizados en el taller](#id3)
 4. [Referencias y recursos para profundizar en los diferentes aspectos mostrados en el taller](#id4)
 
-El taller será retransmitido en la plataforma crowcast, podeis acceder usando [https://www.crowdcast.io/e/introduccion-a-substrate-workshop/](este link).
 
-## 1. Información general del workshop
+El taller será retransmitido en la plataforma crowcast, podeis acceder usando [este link](https://www.crowdcast.io/e/introduccion-a-substrate-workshop/).
+
+## Información general del workshop
 
 Charla/taller en Español sobre el framework Substrate, la principal herramienta para crear bockchains sobre Polkadot. Vamos a ver qué es Substrate, sus características y cómo añadirle funcionalidades a nuestra blockchain. A continuación, habrá un taller sobre cómo añadir un pallet (módulo runtime de Substrate) a nuestra bockchain.
 
@@ -33,7 +34,7 @@ La segunda parte corresponde a la parte del taller, aunque habrá una pequeña i
 
 
 
-## 2. Prerrequisitos para hacer la parte práctica o taller
+## Prerrequisitos para hacer la parte práctica o taller
 
 En el caso que querais llevar a cabo el taller o "trastear" con substrate de la forma en que lo hacemos en éste. Teneis dos opciones:
 
